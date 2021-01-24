@@ -9,6 +9,7 @@ public class Customer extends User {
  
 	public Customer(double checkingAccountValue,double savingAccountValue) 
 	{ 
+		 super();
 		 this.checkingAccountValue = checkingAccountValue; 
 		 this.savingAccountValue = savingAccountValue; 
 	}
@@ -59,6 +60,20 @@ public class Customer extends User {
 		}
 		//return returnBool;
 	}
+	
+	public void depositToChecking(double value){
+		
+		this.checkingAccountValue += value;
+		
+	}
+	
+public void depositToSavings(double value){
+		
+		this.savingAccountValue += value;
+		
+	}
+	
+	
 	// Region getters and setters
 	public double getCheckingAccountValue() {
 		return checkingAccountValue;
